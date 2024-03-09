@@ -1,4 +1,4 @@
-package mg.itu.tp1nomenafinoana.resources;
+package mg.itu.tpCustomernomenafinoana.resources;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;

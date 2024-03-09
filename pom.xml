@@ -5,7 +5,7 @@
     <artifactId>tp1NomenaFinoana</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>tp1NomenaFinoana-1.0-SNAPSHOT</name>
+    <name>tpCustomerNomenaFinoana-1.0-SNAPSHOT</name>
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
