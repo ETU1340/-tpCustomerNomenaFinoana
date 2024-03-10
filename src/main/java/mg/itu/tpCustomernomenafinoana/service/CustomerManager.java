@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package service;
+package mg.itu.tpCustomernomenafinoana.service;
 
 import jakarta.enterprise.context.RequestScoped;
 import mg.itu.tpCustomernomenafinoana.entity.Customer;
