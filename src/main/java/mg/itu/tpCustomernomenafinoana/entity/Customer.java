@@ -27,6 +27,8 @@ import java.io.Serializable;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Customer.findAll", query = "SELECT c FROM Customer c"),
+    @NamedQuery(name = "Customer.findAllNames", query = "SELECT distinct(c.name) FROM Customer c"),
+    @NamedQuery(name = "Customer.findAllStates", query = "SELECT distinct(c.state) FROM Customer c"),
     @NamedQuery(name = "Customer.findByCustomerId", query = "SELECT c FROM Customer c WHERE c.customerId = :customerId"),
     @NamedQuery(name = "Customer.findByName", query = "SELECT c FROM Customer c WHERE c.name = :name"),
     @NamedQuery(name = "Customer.findByAddressline1", query = "SELECT c FROM Customer c WHERE c.addressline1 = :addressline1"),
@@ -208,5 +210,5 @@ public class Customer implements Serializable {
     public String toString() {
         return "mg.itu.tpCustomernomenafinoana.entity.Customer[ customerId=" + customerId + " ]";
     }
-    
+
 }

@@ -4,7 +4,6 @@
  */
 package mg.itu.tpCustomernomenafinoana.service;
 
-import jakarta.enterprise.context.RequestScoped;
 import mg.itu.tpCustomernomenafinoana.entity.Customer;
 import java.util.List;
 import jakarta.enterprise.context.RequestScoped;
@@ -29,14 +28,46 @@ public class CustomerManager {
         em.persist(customer);
     }
 
+    /**
+     * Retourne la liste des clients dans la base de données.
+     *
+     * @return List
+     */
     public List<Customer> getAllCustomers() {
-            Query query = em.createNamedQuery("Customer.findAll");
-       return query.getResultList();
+        Query query = em.createNamedQuery("Customer.findAll");
+        return query.getResultList();
 
     }
 
+    /**
+     * Mise à jour des information sur un client.
+     *
+     * @param customer
+     * @return
+     */
     @Transactional
     public Customer update(Customer customer) {
         return em.merge(customer);
     }
+
+    /**
+     * Retourne la liste des noms dans la base de données sans doublant.
+     *
+     * @return List<String>
+     */
+    public List<String> getAllNames() {
+        Query query = em.createNamedQuery("Customer.findAllNames");
+        return query.getResultList();
+    }
+
+    /**
+     * Retourne la liste des etats dans la base de données sans doublant.
+     *
+     * @return List<String>
+     */
+    public List<String> getAllStates() {
+        Query query = em.createNamedQuery("Customer.findAllStates");
+        return query.getResultList();
+    }
+
 }

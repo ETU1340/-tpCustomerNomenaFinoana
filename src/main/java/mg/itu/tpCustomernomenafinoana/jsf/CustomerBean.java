@@ -22,6 +22,8 @@ import mg.itu.tpCustomernomenafinoana.service.CustomerManager;
 public class CustomerBean implements Serializable {
 
     private List<Customer> customerList;
+    private List<String> nameList;
+    private List<String> stateList;
 
     @Inject
     private CustomerManager customerManager;
@@ -34,12 +36,38 @@ public class CustomerBean implements Serializable {
 
     /**
      * Retourne la liste des clients pour affichage dans une DataTable.
+     *
+     * @return List<Customer>
      */
     public List<Customer> getCustomers() {
         if (customerList == null) {
             customerList = customerManager.getAllCustomers();
         }
         return customerList;
+    }
+
+    /**
+     * Retourne la liste des noms sans doublant.
+     *
+     * @return List<String>
+     */
+    public List<String> getNames() {
+        if (nameList == null) {
+            nameList = customerManager.getAllNames();
+        }
+        return nameList;
+    }
+
+    /**
+     * Retourne la liste des etats sans doublant.
+     *
+     * @return List<String>
+     */
+    public List<String> getStates() {
+        if (stateList == null) {
+            stateList = customerManager.getAllStates();
+        }
+        return stateList;
     }
 
 }
