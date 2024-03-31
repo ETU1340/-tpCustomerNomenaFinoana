@@ -48,6 +48,7 @@
                 <h:messages/>
             </h:form>
             <h:outputText value="Aucun client avec l'id #{customerDetailsBean.idCustomer} !" rendered='#{customerDetailsBean.customer == null}'/>
+              <h:button id="back" value="Revenir à la liste" outcome="customerList" rendered='#{customerDetailsBean.customer == null}'/>
         </f:view>
 
     </h:body>
